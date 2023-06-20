@@ -81,7 +81,7 @@ img:hover {opacity: 0.7;}
 #wrap main #contents .ng ul.gallery li img {width: 100%; height: 150px;}
 
 /* 레이어팝업 */
-#popup {width: 600px;height: 320px;background: url("../images/pu.jpg")no-repeat; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: absolute;left: 50%;top: 350px;transform: translate(-50%,-50%); z-index: 6; }
+#popup {width: 600px;height: 320px;background: url("../images/pu.jpg")no-repeat; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: absolute;left: 50%;top: 350px;transform: translate(-50%,-50%); z-index: 6; display:none;}
 #popup a.close {border-radius: 50px; background-color: #000; font-size: 15px;padding: 10px 30px;font-weight: bold;text-align: center;color: #fff;position: absolute;right: 26px;bottom: 20px;}
 #popup a.close:hover {background-color: #666;}
 
