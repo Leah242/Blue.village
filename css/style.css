@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* reset */
+*{margin: 0;padding: 0;}
+body{background-color: #ffffff;}
+ul,li{margin: 0;padding: 0;list-style-type: none;}
+a{color: #333;text-decoration: none;}
+img:hover {opacity: 0.7;}
+#wrap{width: 100%;}
+/* img{display: none;} */
+
+/* main */
+#wrap main {width: 100%;display: flex;}
+
+/* header */
+#wrap main header {width: 200px;height: 850px; position: relative; z-index: 5;}
+#wrap main header h1.logo {width: 200px;height: 150px;background-color: #fff;}
+#wrap main header h1.logo img { margin-top: 50px;}
+
+/* 멀티 풀메뉴 */
+#wrap main header nav.menu {width: 100%;height: 700px;background-color: #3872cf;}
+
+/* 멀티 풀메뉴 > 대메뉴 */
+#wrap main header nav.menu>ul>li {height: 50px;line-height: 50px; position: relative; }
+#wrap main header nav.menu>ul>li>a {display: block;height: 50px; line-height: 50px;background-color: #3872cf;border-bottom: 1px solid #2a5daf;box-sizing: border-box;font-size: 15px;text-align: center;font-weight: bold;color: #fff;}
+#wrap main header nav.menu>ul>li>a:hover {background-color: #2a5daf;}
+
+/* 멀티 풀메뉴 > 소메뉴 */
+#wrap main header nav.menu>ul>li>ul.submenu {position: absolute; width: 800px; right: -800px;top: 0;  display: none; z-index: 2;}
+#wrap main header nav.menu>ul>li>ul.submenu>li {width: 200px;line-height: 50px; height: 50px;float: left;}
+#wrap main header nav.menu>ul>li>ul.submenu>li>a {display: block;color: #ddd;text-align: center;font-size: 14px;}
+#wrap main header nav.menu>ul>li>ul.submenu>li>a:hover {color: #fff;background-color: #000;font-weight: bold;}
+
+#wrap main header nav.menu .bg {width: calc(100% - -2000px); height: 200px; top: 150px; left: 200px;position: absolute; background-color: rgba(9, 46, 148, 0.7);z-index: 1; display: none;} 
+
+/* 챗봇/연락처 링크 */
+#wrap main header .link {position: absolute;top: 400px;left: 58px;}
+#wrap main header .link a{font-size: 14px; color: #fff;}
+#wrap main header .link a:hover{text-decoration: underline;}
+#wrap main header .link a:nth-child(1){border-right: 1px solid #fff; padding-right: 8px;}
+
+
+/* 콘텐츠영역 */
+#wrap main #contents {width: calc(100% - 200px); height: 850px;}
+/* 콘텐츠영역 > 퀵메뉴 */
+#wrap main #contents .quick {width: 120px;height: 300px;background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: absolute;right: 0;top: 0;z-index: 1;}
+#wrap main #contents .quick ul li {width: 120px;height: 100px;position: relative; box-sizing: border-box;}
+#wrap main #contents .quick ul li:nth-child(1) {border-bottom: 1px dashed #ddd;}
+#wrap main #contents .quick ul li:nth-child(2) {border-bottom: 1px dashed #ddd;}
+#wrap main #contents .quick ul li:hover {background-color: #eee;}
+#wrap main #contents .quick ul li a {display: block;padding-top: 50px;position: absolute;top: 20%;left: 50%;transform: translate(-50%,-50%);}
+#wrap main #contents .quick ul li a img {width: 70px;display: block;}
+
+/* 콘텐츠영역 > 슬라이드 */
+#wrap main #contents .slide{width: 100%; height: 400px;background-color: #fff;overflow: hidden;position: relative;}
+#wrap main #contents .slide .slideList{position: absolute;top: 0;left: 0;width: 100%;}
+#wrap main #contents .slide .slideList img{width: 100%;display: block;height: 400px;}
+
+/* 콘텐츠영역 > 배너 */
+#wrap main #contents .banner{width: 100%;height: 200px;background-color: #092e94; position: relative; }
+#wrap main #contents .banner a img.thum {border-radius: 50%; width: 150px;position: absolute;top: 20px;left: 20px;}
+#wrap main #contents .banner a span {text-align: center;color: #fff; line-height: 1.7;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+#wrap main #contents .banner a span strong {font-size: 30px;color: rgba(255, 255, 255, 0.3);}
+#wrap main #contents .banner a img.arrow { width: 50px;position: absolute;right: 20px;top: 70px;opacity: 0.5;}
+
+/* 콘텐츠영역 > 공지사항,갤러리 */
+#wrap main #contents .ng {width: 100%; height: 250px;display: flex;position: relative;}
+#wrap main #contents .ng h2 {font-size: 15px; background-color: #ddd; color: #000; text-align: center; width: 100px;height: 30px;line-height: 30px; border-top-left-radius: 10px; border-top-right-radius: 10px;cursor: pointer;margin: 10px 0 10px 10px;}
+#wrap main #contents .ng h2.on {background-color: #2e55aa; color: #fff;font-size: 15px; }
+#wrap main #contents .ng ul {width: 100%; position: absolute;top: 40px;border-top: 1px solid #0066ad;}
+
+/* 콘텐츠영역 > 공지사항 */
+#wrap main #contents .ng ul.notice li {height: 33px;line-height: 33px;border-bottom: 1px dashed #ddd; padding-left: 20px; }
+#wrap main #contents .ng ul.notice li:nth-child(1) {margin-top: 18px;}
+#wrap main #contents .ng ul.notice li a:hover { color: #2d54e1; text-decoration: underline;}
+#wrap main #contents .ng ul.notice li span {float: right; padding-right: 20px; color: #999; font-size: 14px; }
+
+/* 콘텐츠영역 > 갤러리 */
+#wrap main #contents .ng ul.gallery {display: flex;justify-content: space-evenly;}
+#wrap main #contents .ng ul.gallery li {width: 32%;margin-top: 30px;}
+#wrap main #contents .ng ul.gallery li img {width: 100%; height: 150px;}
+
+/* 레이어팝업 */
+#popup {width: 600px;height: 320px;background: url("../images/pu.jpg")no-repeat; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); position: absolute;left: 50%;top: 350px;transform: translate(-50%,-50%); z-index: 6; }
+#popup a.close {border-radius: 50px; background-color: #000; font-size: 15px;padding: 10px 30px;font-weight: bold;text-align: center;color: #fff;position: absolute;right: 26px;bottom: 20px;}
+#popup a.close:hover {background-color: #666;}
+
+/* footer */
+#wrap footer {display: flex;width: 100%;height: 120px; background-color: #fff; border-top: 1px solid #000; border-bottom: 1px solid #000; box-sizing: border-box;}
+#wrap footer .blogo {width: 200px; height: 120px; }
+#wrap footer .blogo img{width: 200px; margin-top: 40px;}
+#wrap footer .mc{width: calc(100% - 200px);}
+#wrap footer .mc .bmenu {border-bottom: 1px dashed #ddd; height: 60px;line-height: 60px; }
+#wrap footer .mc .bmenu ul {display: flex; justify-content: space-around;}
+#wrap footer .mc .bmenu ul li a:hover {text-decoration: underline;}
+#wrap footer .mc .bmenu ul li:nth-child(1) {font-weight: bold;}
+#wrap footer .mc .copyright {height: 60px;line-height: 60px;}
+#wrap footer .mc .copyright p {text-align: center;color: #999;}
+
